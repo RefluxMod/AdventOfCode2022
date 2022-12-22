@@ -125,7 +125,7 @@ Dictionary<string, Valve> GetValves(string fileName)
         v.AdjacentValves = inputValves.Values.Where(x => s.Contains(x.Name)).ToList();
     }
 
-    // Hitta snabbaste vägen från start till end. Alla Valves har en lista "FastestPaths" med de snabbaste rutterna till alla andra valves som har flow rate > 0
+    // Hitta snabbaste vägen från start till end. Alla Valves har en lista "FastestPaths" med de snabbaste vägarna till alla andra valves som har flow rate > 0
     // Vi förbereder dessa i förväg så att det ska gå snabbare att räkna fram hela rutten senare
     foreach (var start in inputValves.Values)
     {
